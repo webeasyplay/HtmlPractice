@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 六角餐廳
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous")
+    script(src="https://use.fontawesome.com/57181646bf.js")
+  body
+    include ./header_banner.jade
+    
+    .content
+      .menu
+        h2
+          i.fa.fa-envira(aria-hidden='true') 線上訂購
+        ul
+          li
+            a(href="#") 全部(23)
+          li
+            a(href="#") 只愛吃薯條
+          li
+            a(href="#") 加熱就可食
+          li
+            a(href="#") 不敗漢堡系列
+      .product
+        .product-top
+          .search
+            input(type="text")
+            i.fa.fa-search(aria-hidden='true')
+          .cart
+            p.your-item 結帳去
+            i.fa.fa-shopping-cart(aria-hidden='true')
+            
+        .product-list
+          ul
+            li
+              
+              img(src="./img/product_1.png", alt="")
+              h2 經典漢堡套餐
+              h3 Classic Hamburger Package
+              .line
+              h2.dollar 120
+              a(href= "#") 加入購物車
+            li              
+              img(src="./img/product_2.png", alt="")
+              h2 英俊香腸
+              h3 Handsome Sausage
+              .line
+              h2.dollar 1,024
+              a(href= "#") 加入購物車
+            li
+              img(src="./img/product_3.png", alt="")
+              h2 漢堡兄弟
+              h3 Hamburg Brothers
+              .line
+              h2.dollar 792
+              a(href= "#") 加入購物車
+            li
+              img(src="./img/product_4.png", alt="")
+              h2 完美願望
+              h3 Dragon Ball Package
+              .line
+              h2.dollar 999,999
+              a(href= "#") 加入購物車
+    include ./footer.jade

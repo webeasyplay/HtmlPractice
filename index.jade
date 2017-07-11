@@ -1,0 +1,112 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 六角餐廳
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+    script(src="./js/scrollTop.js")
+  body
+    include ./header_banner.jade
+    //- .header
+    //-   .maxwidth
+    //-     h1 六角西餐廳
+    //-     .menu
+    //-       ul
+    //-         li
+    //-           a(href="#") 特色
+    //-         li
+    //-           a(href="#") 主廚
+    //-         li
+    //-           a(href="#") 地圖
+    //- .banner
+    //-   .maxwidth
+    //-     .banner-title
+    //-       h3 咬一口就無法忘懷的漢堡
+    //-       h4 七夕絕對無法錯過的好滋味六角大漢堡 
+    .secret#feature
+      .secret-title
+        h2.no-span 客人總是在詢問
+           br
+           br
+           |這麼好吃的秘訣是什麼
+      .secret-wraper
+        .secret-content
+          img(src="./img/feature_1.png", alt="")
+          h3 台灣本土蔬菜
+          p In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.
+        .secret-content
+          img(src="./img/feature_2.png", alt="")
+          h3 專業米其林廚師
+          p Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
+        .secret-content
+          img(src="./img/feature_3.png", alt="")
+          h3 對於專業不能退讓
+          p Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
+    .today-cook#cook
+      img(src="./img/main_chef_brown.png", alt="")
+      .cook-introduction
+        h2 今日主廚：帕金森、梅在帕
+        h3 Tody Chef: Plum in Shock
+        p Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius. Donec sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor sollicitudin fermentum. Donec congue lorem a molestie bibendum.
+      .clearDiv
+    .suggest
+      h2 聽聽別人的感想
+      ul
+        li
+          a(href="#")
+            img(src="./img/avatar_1.png", alt="")
+            h3 高雄一口吃
+            p 自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+            p.name 產品經理
+        li
+          a(href="#")
+            img(src="./img/avatar_2.png", alt="")
+            h3 廟口小霸王
+            p 自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+            p.name 金身道士
+        li
+          a(href="#")
+            img(src="./img/avatar_3.png", alt="")
+            h3 春天也來了
+            p 自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+            p.name 美麗萬分
+      .clearDiv
+    .map#map
+
+      h2 我們的位置不太夠做
+         br
+         |要不要先訂位呢？
+
+      .form-wraper
+        .map-img
+
+          img(src="./img/Map.png", alt="")
+        
+        .map-form
+          form
+            label.text 姓名
+            br
+            input.text(type="email" placeholder="六角講師吃尾牙")
+            
+            label 電話
+            br
+            input.text(type="email" placeholder="02-1234567")
+            label 信箱
+            br
+            input.text(type="email" placeholder="webeasyplay.cr@gmail.com")
+            label 人數
+            br
+            input.text(type="email" placeholder="")
+            label 是否需要素食
+            br
+            label YES
+            input.radio(type="radio" id="Yes" name="visted")
+            label No
+            input.radio(type="radio" id="No" name="visted")
+            br
+            .button-wraper
+              button.button-error.pure-button 取消
+              button.button-secondary.pure-button.send 送出
+    include ./footer.jade

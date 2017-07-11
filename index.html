@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>六角餐廳</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="./js/scrollTop.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="maxwidth">
+        <h1>六角西餐廳</h1>
+        <div class="menubutton"><a id="nav-toggle" href="#">&#9776;</a></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#feature">特色</a></li>
+            <li><a href="#cook">主廚</a></li>
+            <li><a href="#map">地圖</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="banner">
+      <div class="maxwidth">
+        <div class="banner-title">
+          <h3>咬一口就無法忘懷的漢堡</h3>
+          <h4>七夕絕對無法錯過的好滋味六角大漢堡 </h4>
+        </div>
+      </div>
+    </div>
+    <div class="secret" id="feature">
+      <div class="secret-title">
+        <h2 class="no-span">客人總是在詢問<br><br>這麼好吃的秘訣是什麼</h2>
+      </div>
+      <div class="secret-wraper">
+        <div class="secret-content"><img src="./img/feature_1.png" alt="">
+          <h3>台灣本土蔬菜</h3>
+          <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.</p>
+        </div>
+        <div class="secret-content"><img src="./img/feature_2.png" alt="">
+          <h3>專業米其林廚師</h3>
+          <p>Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+        </div>
+        <div class="secret-content"><img src="./img/feature_3.png" alt="">
+          <h3>對於專業不能退讓</h3>
+          <p>Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+        </div>
+      </div>
+    </div>
+    <div class="today-cook" id="cook"><img src="./img/main_chef_brown.png" alt="">
+      <div class="cook-introduction">
+        <h2>今日主廚：帕金森、梅在帕</h2>
+        <h3>Tody Chef: Plum in Shock</h3>
+        <p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius. Donec sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor sollicitudin fermentum. Donec congue lorem a molestie bibendum.</p>
+      </div>
+      <div class="clearDiv"></div>
+    </div>
+    <div class="suggest">
+      <h2>聽聽別人的感想</h2>
+      <ul>
+        <li><a href="#"><img src="./img/avatar_1.png" alt="">
+            <h3>高雄一口吃</h3>
+            <p>自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+            <p class="name">產品經理</p></a></li>
+        <li><a href="#"><img src="./img/avatar_2.png" alt="">
+            <h3>廟口小霸王</h3>
+            <p>自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+            <p class="name">金身道士</p></a></li>
+        <li><a href="#"><img src="./img/avatar_3.png" alt="">
+            <h3>春天也來了</h3>
+            <p>自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+            <p class="name">美麗萬分</p></a></li>
+      </ul>
+      <div class="clearDiv"></div>
+    </div>
+    <div class="map" id="map">
+      <h2>我們的位置不太夠做<br>要不要先訂位呢？</h2>
+      <div class="form-wraper">
+        <div class="map-img"><img src="./img/Map.png" alt=""></div>
+        <div class="map-form">
+          <form>
+            <label class="text">姓名</label><br>
+            <input class="text" type="email" placeholder="六角講師吃尾牙">
+            <label>電話</label><br>
+            <input class="text" type="email" placeholder="02-1234567">
+            <label>信箱</label><br>
+            <input class="text" type="email" placeholder="webeasyplay.cr@gmail.com">
+            <label>人數</label><br>
+            <input class="text" type="email" placeholder="">
+            <label>是否需要素食</label><br>
+            <label>YES</label>
+            <input class="radio" type="radio" id="Yes" name="visted">
+            <label>No</label>
+            <input class="radio" type="radio" id="No" name="visted"><br>
+            <div class="button-wraper">
+              <button class="button-error pure-button">取消</button>
+              <button class="button-secondary pure-button send">送出</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-about">
+        <h3>關於 六角西餐廳</h3>
+        <p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. </p>
+      </div>
+      <div class="footer-contact">
+        <h3>聯絡方式</h3>
+        <ul>
+          <li>高雄市中正五路到底</li>
+          <li>+886 886 886</li>
+          <li>service@hexschool.com</li>
+        </ul>
+      </div>
+      <div class="footer-media">
+        <h1>六角西餐廳</h1>
+        <ul class="media">
+          <li><a href="#"><img src="https://cdn0.iconfinder.com/data/icons/social-network-7/50/7-128.png" alt=""></a></li>
+          <li><a href="#"><img src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/256/Twitter-icon.png" alt=""></a></li>
+          <li><a href="#"><img src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/facebook-256.png" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
