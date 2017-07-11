@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 六角餐廳
+    link(rel="stylesheet", href="css/style.css")
+
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(src="https://use.fontawesome.com/57181646bf.js")
+
+    
+    script(src="./js/login.js")
+  body
+    include ./header_banner.jade
+    .loginWraper
+        h1 六角西餐廳
+        h2 享受美食好味道
+        .login
+            h2 Loing
+            form(action="")
+                label E-mail Address*
+                input.form-control(type="text",placeholder="")
+                label Password*
+                input.form-control(type="text",placeholder="")
+                a(href="#") 忘記密碼？
+                input(type="button",value="註冊",id="register") 
+                input(type="submit",value="登入") 
+        .register
+            h2 REGISTER
+            .introduction
+                h3 就是這樣條款：
+                p Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien...
+            .formwraper
+                form(action="")
+                    label E-mail Address*
+                    input.form-control(type="text",placeholder="")
+                    label Password*
+                    input.form-control(type="text",placeholder="")
+                    input.form-control(type="text",placeholder="")
+                    a(href="#") 忘記密碼？
+                    input(type="submit",value="註冊",id="login") 
+                    
+            
+    include ./footer.jade
+  script.
+    

@@ -1,0 +1,678 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+  font-family: 微軟正黑體
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+a
+  color: #FFF
+  text-decoration: none
+$font-base-color: #fff
+@mixin center()
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+@mixin h2Title()
+
+  font-size: 24px
+  margin-top: 30px
+  text-align: center
+
+  color: #3D1101
+.maxwidth
+  // max-width: 1024px
+  // margin: 0 auto
+.header
+  background-color: black
+  height: 56px
+  color: #fff
+  position: relative
+  & .menubutton
+    font-size: 24px
+    display: none
+    line-height: 24px
+    float: right
+    margin:  16px 24px 16px 24px
+  & h1
+    float: left
+    font-size: 24px
+    margin:  16px 24px 16px 24px
+    font-family: NotoSansCJKtc-Black,微軟正黑體
+  & .menu
+    display: inline-block
+    float: right
+
+  & ul
+    line-height: 56px
+    // display: none
+    // position: absolute
+    // float: left
+    // top: 50%
+    // transform: translateY(-50%)
+  & li
+    float: left
+    
+    list-style-type: none
+    font-size: 16px
+    font-family: MicrosoftJhengHeiRegular
+    & a
+      padding: 10px
+
+  @media(max-width:480px)
+
+    & .menubutton
+      display: inline-block
+    & .menu ul
+      display: none
+
+      max-height: 0px
+      overflow: hidden
+      -webkit-transition: all 2s
+      transition: all 2s
+    & .menu ul>li
+      width: 100%
+      border: 1px dashed white
+      padding: 0px
+      padding-left: 10px
+      & a
+        width: 100%
+        display: block
+        padding: 0px
+    & .menudisplay
+      max-height: 174px
+
+    & .menu ul
+      max-height: 0px
+      display: block
+      position: absolute
+      z-index: 100
+      left: 0px
+      top: 56px
+      background: black
+      width: 100%
+    & .showmenu
+      max-height: 174px
+      // & ul
+      //   display: block
+      //   position: absolute
+      //   z-index: 100
+      //   left: 0px
+      //   top: 56px
+      //   background: black
+      //   width: 100%
+
+      // & li
+      //   width: 100%
+      //   border: 1px dashed white
+      //   padding: 0px
+      //   padding-left: 10px
+      //   & a
+      //     width: 100%
+      //     display: block
+      //     padding: 0px
+.banner
+  background-image: url("../img/header_desktop.png") 
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+  position: relative
+  height: 320px
+  
+  & .banner-title
+    text-align: center
+    color: $font-base-color
+    +center()
+    background: rgba(0,0,0,0.35)
+    padding: 20px
+    & h3
+      padding: 20px
+      font-size: 36px
+    & h4
+      font-size: 16px
+  @media(max-width: 480px)
+    background-image: url("../img/header_mobile.png") 
+.secret
+  
+  padding-bottom: 20px
+  background-color: #EFE9E7
+  & h2
+    text-align: center
+    padding: 20px 0px 20px 0px
+  & .secret-wraper
+    display: flex
+  .secret-title
+    display: flex
+    align-items: center;
+    justify-content: center;
+  & .secret-content
+    padding: 20px
+    text-align: center
+    margin-left: 1%
+    margin-right: 1%
+    display: inline-block
+    box-sizing: border-box
+    & img
+      border-radius: 50%
+    & h3
+      margin-top: 16px
+    & p
+      margin-top: 16px
+      text-align: left
+  @media(max-width:768px)
+    & .secret-wraper
+      display: flow-root
+    & .secret-content>p
+      width: 60%
+      margin: 0 auto
+      padding-top: 16px
+      line-height: 20px
+      word-wrap: break-word
+h2.no-span
+  text-align: center
+  display: table
+  white-space: nowrap
+  width: 50%
+  &:before, &:after
+    border-top: 1px solid grey
+    content: ''
+    display: table-cell
+    position: relative
+    top: 1.3em
+    width: 30%
+  &:before
+    right: 1.5%
+  &:after
+    left: 1.5%
+.today-cook
+  display: flex
+  background: #3D1101
+  color: #EFE9E7
+  padding: 0px 30px 0px 20px
+  align-items: center
+  justify-content: center
+  img
+    float: left
+    width: 40%
+  & .cook-introduction
+
+    width: 80%
+    padding-left: 2%
+    text-align: left
+    float: right
+    width: 58%
+    & h3
+      margin-top: 6px
+    & p
+      margin-top: 10px
+      padding-right: 30px
+  @media(max-width:480px)
+
+    display: flow-root
+    img, .cook-introduction
+      display: block
+      width: 100%
+      float: none
+    .cook-introduction
+      padding: 20px 0px
+.clearDiv
+  clear: Both
+.suggest
+  background-color: #EFE9E7
+  padding-top: 40px
+  & h2
+    text-align: center
+    color: #3D1101
+    font-size: 24px
+  & img
+    border-radius: 67px
+  & li
+    float: left
+    margin-top: 30px
+    margin-bottom: 30px
+    margin-left: 4%
+    margin-right: 4%
+    width: 25.3333%
+    box-sizing: border-box
+    position: relative
+    & h3,& p
+      color: #3D1101
+
+      display: inline-block
+    & p
+      padding: 10px 20px 10px 10px
+      margin-left: 67px
+    & .name
+      float: right
+      &::before
+        content: "--"
+        padding-right: 3px
+    & h3
+      
+      position: absolute
+      top: 30px
+      // transform: translateY(-50%)
+      // -ms-transform: translateY(-50%)
+      // -webkit-transform: translateY(-50%)
+  @media(max-width:768px)
+    & li
+      width: 92.333%
+      & p
+        margin-left: 0px
+.map
+  background:#FAFAFA 70%
+
+  padding: 40px 0px
+  // border: 1px solid
+  box-sizing: border-box
+  padding-bottom: 30px
+  // padding: 30px 20px 30px 20px
+  & h2
+    font-size: 24px
+    text-align: center
+    color: #3D1101
+    
+    margin-bottom: 30px
+  & .form-wraper
+    position: relative
+      
+    box-sizing: border-box
+
+  & .map-img
+    display: inline-block
+    text-align: center
+    // border: 1px solid
+    box-sizing: border-box
+    width: 50%
+    @media(max-width:960px)
+      width: 100%
+    @media(max-width:768px)
+      width: 100%
+    
+
+    
+  & .map-form
+
+    width: 50%
+    display: inline-block
+    position: absolute
+    
+    top: 50%
+    transform:  translateY(-50%)
+    & label
+      display: inline-block
+      margin-top: 10px
+      color: #3D1101
+
+    & input
+      display: block
+      margin-top: 5px
+      margin-bottom: 5px
+      &.text
+        width: 80%
+    & .radio
+      display: inline-block
+    & .button-wraper
+      width: 80%
+    & button
+      margin-left: 20px
+      float: right
+      &.send
+        background-color: orange
+    @media(max-width:960px)
+      display: block
+      position: relative
+      top: initial
+      transform: translateY(0%)
+      max-width: 462px;
+      margin: 0 auto;
+      form
+        max-width: 462px
+        display: block
+        margin: 0 auto
+        & .text
+          width: 100%
+        & .button-wraper
+          width: 100%
+          margin-bottom: 20px          
+    @media(max-width: 768px)
+      width: 100%
+      display: block
+      position: relative
+      top: initial
+      transform: translateY(0%)
+      margin: 0 auto
+      form
+        max-width: 462px
+        display: block
+        margin: 0 auto
+        & .text
+          width: 100%
+        & .button-wraper
+          width: 100%
+          margin-bottom: 20px
+
+
+.footer
+  width: 100%
+  float: left
+  background: #EFE9E7
+
+  & .footer-about,& .footer-contact,& .footer-media
+    
+    display: inline-block
+    vertical-align: top
+    height: auto
+    width: 32.333%
+    box-sizing: border-box
+    & h3
+      // text-align: center
+      font-size: 24px
+      margin-bottom: 15px
+    & h1
+      text-align: right
+    & p
+      width: 80%
+
+  & .footer-about,& .footer-contact
+    padding: 30px
+  ul 
+    margin-left 15px
+  li
+    list-style-type: disc
+  & .footer-media
+    margin-top: 5px
+    padding-right: 40px
+    & ul
+      float: right 
+
+    & li
+
+      float: left
+      margin-left: 5px
+
+      list-style-type: none
+      & img
+        max-width: 31px
+
+
+.content
+  margin-top: 30px
+  & .menu
+    width: 20%
+    display: inline-block
+    padding-left: 60px
+    
+    box-sizing: border-box
+    & h2
+      margin-top: 20px
+      & i
+        padding-right: 10px
+    & ul
+      & li
+        // padding-top: 10px
+        // padding-bottom: 10px
+        border-bottom: 1px solid #3D1101
+        width: 70%
+    & li>a
+      padding-top: 10px
+      padding-bottom: 10px
+      display: block
+      color: #3D1101       
+  & .product
+    display: inline-block
+    width: 79%
+    position: relative
+    vertical-align: top
+    padding-bottom: 3%
+
+    & .product-top
+      
+      padding-left: 1%
+      & .search
+        display: inline-block
+        width: 80%
+        & input
+          width: 60%
+        & i
+          background-color: #3D1101
+          color: #fff
+          font-size: 28px
+          vertical-align: top
+      & .cart
+        width: 18%
+        display: inline-block
+        font-size: 16px
+        position: relative
+        & p,& i
+          line-height: 28px
+          padding-right: 10px
+          padding-left: 10px      
+          display: inline-block 
+    & .product-list
+      padding-left: 1%
+      & li
+        float: left
+        margin-right: 1%
+        width: 32.33333%
+        margin-top: 1%
+        padding-bottom: 1%
+        box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+        -webkit-box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+        -moz-box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+      & h2,& h3,& h4,& a
+        text-align: center
+        color: #3D1101
+        margin-top: 20px
+      & a
+        display: block
+        padding: 5px 10px 5px 10px
+        margin-left: 10%
+        margin-right: 10%
+        border: 2px solid #FF5E45 
+      & h2
+        font-size: 20px
+      & h3
+        font-size: 12px
+      & img
+        max-width: 100%
+        display: block
+        margin: 0 auto
+      .line
+        border: 1px solid #3D1101
+        width: 40%
+        margin: 0 auto
+        margin-top: 20px
+      .dollar::before
+        content: "$"
+      @media(max-width: 480px)
+        & li
+          margin-left: 0px
+          padding: 20px 0px
+          width: 98.333%
+  @media(max-width: 768px)
+    & .menu
+      display: block
+      text-align: center
+      width: 98%
+      margin-left: 1%
+      margin-right: 1%
+      padding-left: 0px
+      & ul>li
+        width: 100%
+    & .product
+      width: 100%
+      & .product-top
+        padding-top: 10px
+        padding-left: 0
+        & .search
+          display: block
+          width: 100%
+          & input
+            box-sizing: border-box
+            width: calc(100% - 26px)
+        & .cart
+          display: flex
+          width: 100%
+          justify-content: center
+
+
+            
+
+
+.your-item
+  position: relative
+  &:after
+    content: ''
+    height: 50%
+    //You can change this if you want smaller/bigger borders
+    width: 1px
+    position: absolute
+    right: 1px
+    top: 7px
+    
+    // If you want to set a smaller height and center it, change this value
+    background-color: #000000
+    // The color of your border
+.loginWraper
+  background: #EFE9E7
+  color: #3D1101
+  padding: 30px
+  & h2,& h1
+    text-align: center
+    background: #EFE9E7
+    margin-bottom: 5px
+  & h1
+    font-size: 48px
+    margin-top: 50px
+  & h2
+    font-size: 20px
+    margin-bottom: 35px
+
+    
+
+.login
+  width: 28%
+  height: 273px
+
+  margin: 0 auto
+  padding: 20px
+  border-top: 3px #FF5E45 solid
+  box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+  -webkit-box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+  -moz-box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+  & form
+    display: block
+    width: 90%
+  & label,& input
+    margin-top: 18px
+  & label
+    display: block
+  & input
+     padding: 10px
+     width: 80%
+     font-family: FontAwesome
+     font-style: normal
+     font-weight: normal
+     text-decoration: inherit
+  & input[type="button"],& input[type="submit"]
+    border: none
+    width: 43%
+    color: #FFF
+    border-radius: 3px
+  & input[type="submit"]
+    background: #F56C23
+  & input[type="button"]
+    background: rgba(0,0,0,0.35) 
+  & a
+    color: #FF5E45
+    display: block
+  // display: none
+.register
+  display: none
+  border-top: 3px #FF5E45 solid
+  box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+  -webkit-box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+  -moz-box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.4)
+  width: 58%
+  margin: 0 auto
+  padding: 20px
+  .introduction
+    vertical-align: top
+    display: inline-block
+    width: 46%
+    margin-top: 18px
+    & h3
+      font-size: 20px
+    & p
+      font-size: 18px
+  
+  .formwraper
+    display: inline-block
+    width: 53%
+    & form
+      display: block
+      padding-left: 2%
+      & label,& input
+          margin-top: 18px
+      & label
+        display: block
+      & input
+         padding: 10px
+         width: 90%
+         font-family: FontAwesome
+         font-style: normal
+         font-weight: normal
+         text-decoration: inherit
+      & input[type="button"],& input[type="submit"]
+        border: none
+        width: 47%
+        color: #FFF
+        border-radius: 3px
+      & input[type="submit"]
+        background: #F56C23
+        
+      & a
+        color: #FF5E45
+        display: block
+.form-control 
+  font-family: "FontAwesome"
+
+
+
+
+
+
+
